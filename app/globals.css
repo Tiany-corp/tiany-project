@@ -1,26 +1,112 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* 🎨 Thème global Tech Noir */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #0b0b0b;
+  --color-bg-alt: #111111;
+  --color-text: #e5e5e5;
+  --color-subtext: #9ca3af;
+  --color-accent: #00d1ff;
+  --color-accent-2: #b26aff;
+  --font-family: Roboto;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 🌍 Styles de base */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-[poppins] bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen overflow-x-hidden;
+  padding-top: 64px; /* pour navbar fixe */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold text-white font-[poppins];
+}
+
+p {
+  @apply text-[var(--color-subtext)] font-[poppins] leading-relaxed;
+}
+
+a {
+  @apply transition-colors font-[poppins];
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* 🧱 Sections */
+.section {
+  @apply py-24 px-6 max-w-6xl mx-auto;
+}
+
+.section-dark {
+  background-color: var(--color-bg-alt);
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-semibold font-[poppins] mb-12 text-center;
+}
+
+/* 🪄 Boutons */
+.btn {
+  @apply inline-block px-6 py-3 rounded-full font-[poppins] transition;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: #00a8cc;
+}
+
+.btn-outline {
+  border: 1px solid var(--color-accent-2);
+  color: var(--color-accent-2);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-accent-2);
+  color: black;
+}
+
+/* 🧊 Cartes */
+.card {
+  @apply bg-[var(--color-bg-alt)] p-8 rounded-2xl border border-gray-800 transition;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px var(--color-accent-2)33;
+  border-color: var(--color-accent-2)55;
+}
+
+/* ✨ Animations générales */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🌌 Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
 }
