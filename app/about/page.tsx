@@ -1,15 +1,15 @@
 "use client"
 
-import { motion } from "framer-motion"
+import {motion} from "framer-motion"
 
 export default function APropos() {
     return (
         <main className="min-h-screen bg-bgPrimary text-textPrimary px-6 md:px-16 py-20 flex flex-col items-center">
             {/* --- Section Intro --- */}
             <motion.section
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={{opacity: 0, y: 30}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.8}}
                 className="max-w-4xl text-center"
             >
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 text-accent">
@@ -26,9 +26,9 @@ export default function APropos() {
 
             {/* --- Photo --- */}
             <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
+                initial={{opacity: 0, scale: 0.8}}
+                animate={{opacity: 1, scale: 1}}
+                transition={{duration: 0.7, delay: 0.3}}
                 className="mt-12"
             >
                 <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-accent shadow-lg">
@@ -42,12 +42,13 @@ export default function APropos() {
 
             {/* --- Section compétences / valeurs --- */}
             <motion.section
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{delay: 0.6, duration: 0.8}}
                 className="max-w-5xl mt-16 grid md:grid-cols-2 gap-10"
             >
-                <div className="bg-bgSecondary border border-borderColor rounded-2xl p-6 shadow-sm hover:shadow-accent/10 transition-all">
+                <div
+                    className="bg-bgSecondary border border-borderColor rounded-2xl p-6 shadow-sm hover:shadow-accent/10 transition-all">
                     <h2 className="text-2xl font-semibold mb-3 text-accent">
                         Mes compétences
                     </h2>
@@ -59,7 +60,8 @@ export default function APropos() {
                     </ul>
                 </div>
 
-                <div className="bg-bgSecondary border border-borderColor rounded-2xl p-6 shadow-sm hover:shadow-accent/10 transition-all">
+                <div
+                    className="bg-bgSecondary border border-borderColor rounded-2xl p-6 shadow-sm hover:shadow-accent/10 transition-all">
                     <h2 className="text-2xl font-semibold mb-3 text-accent">
                         Ma vision
                     </h2>
@@ -71,6 +73,20 @@ export default function APropos() {
                     </p>
                 </div>
             </motion.section>
+            {/*<div className="flex  bg-green w-full h-50">*/}
+            {/*    <div className="border-white bg-green border-1 w-200">*/}
+            {/*        <h1>Gauche</h1>*/}
+            {/*    </div>*/}
+            {/*    <div className="border-1 bg-green w-full p-5 overflow-scroll">*/}
+            {/*            <div className="w-auto h-20 bg-white"></div>*/}
+            {/*            <div className="w-auto h-20 bg-white"></div>*/}
+            {/*            <div className="w-auto h-20 bg-white"></div>*/}
+            {/*            <div className="w-auto h-20 bg-white"></div>*/}
+            {/*            <div className="w-auto h-20 bg-white"></div>*/}
+
+            {/*    </div>*/}
+
+            {/*</div>*/}
         </main>
     )
 }

@@ -59,6 +59,9 @@ export default function RegisterPage() {
                 </button>
             </form>
             {message && <p className="mt-2 text-center">{message}</p>}
+
+
         </div>
+
     );
 }
