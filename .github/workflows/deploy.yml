@@ -1,22 +1,30 @@
-name: Deploy via FTP
+name: Deploy Next.js to Infomaniak
 
 on:
   push:
     branches:
-      - main  # Vérifiez que votre branche principale s'appelle bien main
+      - main
 
 jobs:
-  web-deploy:
-    name: Deploy
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Get latest code
-      uses: actions/checkout@v3
-    
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /web/ # Le dossier sur Infomaniak (vérifiez le nom)
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+        # Note : Assurez-vous que votre next.config.ts contient : output: 'export'
+
+      - name: Sync files to Infomaniak
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # On envoie le dossier 'out' (produit par le build) vers 'web'
+          local-dir: ./out/ 
+          server-dir: /web/

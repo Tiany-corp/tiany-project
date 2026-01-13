@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     // Qualité par défaut (1-100, 75 est un bon compromis)
     minimumCacheTTL: 60,
   },
+  output: 'export',
 };
 
 export default nextConfig;
