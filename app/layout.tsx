@@ -1,6 +1,6 @@
+import React from 'react';
 import './globals.css'
-import Navbar from "./component/Navbar";
-import HaloBackground from './component/HaloBackground';
+
 
 export const metadata = {
     title: "Tiany project",
@@ -8,16 +8,16 @@ export const metadata = {
 };
 
 
-export default function RootLayout({children}) { // problème entre children est ce qu'il y a vraiment dedans // C'est le global CSS Le problème !!!!!
+export default function RootLayout({ children }: { children: React.ReactNode }) { // problème entre children est ce qu'il y a vraiment dedans // C'est le global CSS Le problème !!!!!
     return (
         <html lang="fr">
-        <body className="bg-gray-100 flex items-center justify-center">
-        {/* <Navbar/> */}
-        <main>
-            {children}
+            <body className="bg-gray-100 flex items-center justify-center">
+                {/* <Navbar/> */}
+                <main>
+                    {children}
 
-        </main>
-        </body>
+                </main>
+            </body>
         </html>
     )
 }

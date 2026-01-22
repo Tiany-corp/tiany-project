@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import "./js/bg.js";
 import ProjectCards from "@/app/component/ProjectCards";
 import { useState } from "react";
 import { cn } from '@/lib/utils';
@@ -104,7 +103,7 @@ export default function HomePage() {
                         transition={{ delay: 0.3, duration: 1 }}
                         className="text-lg md:text-2xl text-gray-400 max-w-2xl mx-auto"
                     >
-                        Penser, Créer, Coder.
+                        Penser, Coder, Créer.
                     </motion.p>
 
                     <motion.div
