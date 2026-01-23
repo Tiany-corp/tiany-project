@@ -19,12 +19,14 @@ jobs:
         run: npm run build
         # Note : Assurez-vous que votre next.config.ts contient : output: 'export'
 
-      - name: Sync files to Infomaniak
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy to Infomaniak via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          # On envoie le dossier 'out' (produit par le build) vers 'web'
-          local-dir: ./out/ 
-          server-dir: /web/
+          server: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          local_path: ./out/*
+          remote_path: /web/
+          sftp_only: true
+
