@@ -13,16 +13,18 @@ interface Project {
     desc: string;
     tech: string[];
     photo: string;
+    link: string;
 }
 
 export default function HomePage() {
     const projects: Project[] = [
         {
             id: 1,
-            title: 'Site e-commerce fictif',
-            desc: 'Une boutique e-commerce de basket pleines de surprises. Fait en php et html et CSS',
+            title: 'Site RingZ 3D',
+            desc: 'Un site fait avec Babylon JS qui explique le fonctionnement de la conception de bague avec les logiciels CAO',
             tech: ['PHP', 'HTML', 'CSS'],
-            photo: "/img/ecomsite.png",
+            photo: "/img/bague%20screen.png",
+            link: "https://jewel-projecct.tiany-rafa.fr/",
         },
         {
             id: 2,
@@ -30,6 +32,7 @@ export default function HomePage() {
             desc: 'Interface de gestion pour un festival de cinéma avec base de données et filtrage avancé.',
             tech: ['Vue.js', 'Node.js', 'Maria DB'],
             photo: "/img/Ojolocco.png",
+            link: "https://ojoloco.tiany-rafa.fr/",
         },
         {
             id: 3,
@@ -37,6 +40,7 @@ export default function HomePage() {
             desc: "Gestion d'utilisateurs et événements via une interface sécurisée et minimaliste.",
             tech: ['Softr', 'Airtable'],
             photo: "/img/Fds.png",
+            link: "https://ojoloco.tiany-rafa.fr/",
         },
         {
             id: 4,
@@ -44,6 +48,7 @@ export default function HomePage() {
             desc: "Générateur d'accords de musique téléchargable avec preset, filtrage et édition d'un clavier",
             tech: ['React', 'Next', 'TypeScript'],
             photo: "/img/Fds.png",
+            link: "https://ojoloco.tiany-rafa.fr/",
         },
     ];
 
@@ -131,6 +136,7 @@ export default function HomePage() {
                         initial={{ opacity: 0, y: 100 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="absolute bottom-10 left-0 w-full flex flex-wrap justify-center gap-6 px-4 z-20"
+
                     >
                         {projects.slice(0, 3).map((project) => (
                             <div key={project.id} className="w-full md:w-[400px] h-full bg-black/50 backdrop-blur-sm rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105">
@@ -138,6 +144,7 @@ export default function HomePage() {
                                     title={project.title}
                                     desc={project.desc}
                                     image={project.photo}
+                                    onClick={() => window.open(project.link, "_blank")}
                                 />
                             </div>
                         ))}

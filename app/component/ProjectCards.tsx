@@ -4,15 +4,17 @@ type ProjectCardsProps = {
     title: string;
     desc: string;
     image: string;
+    onClick?: () => void;
 }
 
 export default function ProjectCards({
     title,
     desc,
-    image
+    image,
+    onClick
 }: ProjectCardsProps) {
     return (
-        <div className="grid grid-cols-2 ">
+        <div className={`grid grid-cols-2 ${onClick ? 'cursor-pointer' : ''}`} onClick={onClick}>
             {/*Ca ca me met une grid avec des colones à tailles variable ?*/}
             {/*Image*/}
             <Image
