@@ -40,7 +40,7 @@ export default function HomePage() {
             desc: "Gestion d'utilisateurs et événements via une interface sécurisée et minimaliste.",
             tech: ['Softr', 'Airtable'],
             photo: "/img/Fds.png",
-            link: "https://ojoloco.tiany-rafa.fr/",
+            link: "https://drive.google.com/file/d/1c1i2MRag5HRxma8uliKX5MSBEIzdGAsS/view?usp=sharing",
         },
         {
             id: 4,
