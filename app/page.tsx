@@ -31,7 +31,7 @@ export default function HomePage() {
             title: 'KeepYourSeed',
             desc: 'Un enregistreur de souvenir audio',
             tech: ['Vue.js', 'Node.js', 'Maria DB'],
-            photo: "/img/Ojolocco.png",
+            photo: "/img/logo.svg",
             link: "https://keepyourseed.tiany-rafa.fr/",
         },
         {
