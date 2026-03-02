@@ -10,22 +10,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
         # Note : Assurez-vous que votre next.config.ts contient : output: 'export'
 
-      - name: Install sshpass
-        run: sudo apt-get install -y sshpass
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy to Infomaniak via Rsync
         run: |
-          sshpass -p "${{ secrets.SSH_PASSWORD }}" rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -p 22" ./out/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:sites/tiany-rafa.fr/
-
-
-
-
+          rsync -avz --delete \
+            --exclude '.git*' \
+            --exclude 'node_modules' \
+            ./out/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:sites/tiany-rafa.fr/
