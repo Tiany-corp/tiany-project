@@ -28,11 +28,11 @@ export default function HomePage() {
         },
         {
             id: 2,
-            title: 'Application Festival Ojoloco',
-            desc: 'Interface de gestion pour un festival de cinéma avec base de données et filtrage avancé.',
+            title: 'KeepYourSeed',
+            desc: 'Un enregistreur de souvenir audio',
             tech: ['Vue.js', 'Node.js', 'Maria DB'],
             photo: "/img/Ojolocco.png",
-            link: "https://ojoloco.tiany-rafa.fr/",
+            link: "https://keepyourseed.tiany-rafa.fr/",
         },
         {
             id: 3,
