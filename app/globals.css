@@ -1,4 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  --font-display: var(--font-montserrat), sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,25 +17,25 @@
   --color-subtext: #9ca3af;
   --color-accent: #00d1ff;
   --color-accent-2: #b26aff;
-  --font-family: Roboto;
+  --font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
 
 }
 
 /* 🌍 Styles de base */
 body {
-  @apply font-[poppins] bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen overflow-x-hidden;
+  @apply font-sans bg-[var(--color-bg)] text-[var(--color-text)] min-h-screen overflow-x-hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-semibold text-white font-[poppins];
+  @apply font-display font-bold text-white;
 }
 
 p {
-  @apply text-[var(--color-subtext)] font-[poppins] leading-relaxed;
+  @apply text-[var(--color-subtext)] leading-relaxed;
 }
 
 a {
-  @apply transition-colors font-[poppins];
+  @apply transition-colors;
 }
 
 a:hover {
@@ -46,13 +52,12 @@ a:hover {
 }
 
 .section-title {
-  @apply text-3xl md:text-4xl font-semibold font-[poppins] mb-12 text-center;
+  @apply text-3xl md:text-4xl font-bold font-display mb-12 text-center;
 }
 
 /* 🪄 Boutons */
 .btn {
-  @apply inline-block px-6 py-3 rounded-full font-[poppins] transition;
-  font-family: "Poppins", sans-serif;
+  @apply inline-block px-6 py-3 rounded-full font-sans transition;
 }
 
 .btn-primary {

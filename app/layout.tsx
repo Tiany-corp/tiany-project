@@ -1,6 +1,13 @@
 import React from 'react';
 import './globals.css'
+import { Montserrat } from 'next/font/google';
 
+const montserrat = Montserrat({
+    variable: '--font-montserrat',
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '600', '700', '800', '900'],
+    display: 'swap',
+});
 
 export const metadata = {
     title: "Tiany project",
@@ -10,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) { // problème entre children est ce qu'il y a vraiment dedans // C'est le global CSS Le problème !!!!!
     return (
-        <html lang="fr">
+        <html lang="fr" className={`${montserrat.variable}`}>
             <body className="bg-gray-100 flex items-center justify-center">
                 {/* <Navbar/> */}
                 <main>

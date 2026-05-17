@@ -21,23 +21,23 @@ export default function HomePage() {
         {
             id: 1,
             title: 'Site RingZ 3D',
-            desc: 'Un site fait avec Babylon JS qui explique le fonctionnement de la conception de bague avec les logiciels CAO',
+            desc: 'Un expérience permettant de comprendre le fonctionnement de la conception de bague avec les logiciels CAO',
             tech: ['PHP', 'HTML', 'CSS'],
             photo: "/img/bague%20screen.png",
             link: "https://jewel-projecct.tiany-rafa.fr/",
         },
         {
             id: 2,
-            title: 'KeepYourSeed',
-            desc: 'Un enregistreur de souvenir audio',
+            title: 'KeepYourSeeds',
+            desc: 'Une application permettant de stocker, agencer, entretenir et déployer ses pensées.',
             tech: ['Vue.js', 'Node.js', 'Maria DB'],
-            photo: "/img/logo.svg",
+            photo: "/img/oragnicKYS.png",
             link: "https://keepyourseed.tiany-rafa.fr/",
         },
         {
             id: 3,
-            title: "Dashboard dAssociation",
-            desc: "Gestion d'utilisateurs et événements via une interface sécurisée et minimaliste.",
+            title: "Dashboard d'association",
+            desc: "Un rapport explicant le processus de conception et de déploiement d'un CRM",
             tech: ['Softr', 'Airtable'],
             photo: "/img/Fds.png",
             link: "https://drive.google.com/file/d/1c1i2MRag5HRxma8uliKX5MSBEIzdGAsS/view?usp=sharing",
@@ -56,7 +56,7 @@ export default function HomePage() {
 
 
     return (
-        <main className="bg-[#0b0b0b] text-gray-200 font-[Inter] overflow-hidden halo">
+        <main className="bg-[#0b0b0b] text-gray-200 font-sans overflow-hidden halo">
 
             <motion.p
                 className="absolute w-50 right-2 bottom-18/20 -translate-y-1/2 fixed" // fixed permet de de fixer la position au viewport -translate-y-1/2 => le 1/2 fait quoi ?
@@ -108,7 +108,7 @@ export default function HomePage() {
                         transition={{ delay: 0.3, duration: 1 }}
                         className="text-lg md:text-2xl text-gray-400 max-w-2xl mx-auto"
                     >
-                        Penser, Coder, Créer.
+                        Penser, Créer, Ajuster.
                     </motion.p>
 
                     <motion.div
