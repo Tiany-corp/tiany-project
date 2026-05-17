@@ -21,7 +21,7 @@ export default function HomePage() {
         {
             id: 1,
             title: 'Site RingZ 3D',
-            desc: 'Un expérience permettant de comprendre le fonctionnement de la conception de bague avec les logiciels CAO',
+            desc: 'Une expérience permettant de comprendre le fonctionnement de la conception de bague avec les logiciels CAO',
             tech: ['PHP', 'HTML', 'CSS'],
             photo: "/img/bague%20screen.png",
             link: "https://jewel-projecct.tiany-rafa.fr/",
@@ -37,7 +37,7 @@ export default function HomePage() {
         {
             id: 3,
             title: "Dashboard d'association",
-            desc: "Un rapport explicant le processus de conception et de déploiement d'un CRM",
+            desc: "Un rapport expliquant le processus de conception et de déploiement d'un CRM",
             tech: ['Softr', 'Airtable'],
             photo: "/img/Fds.png",
             link: "https://drive.google.com/file/d/1c1i2MRag5HRxma8uliKX5MSBEIzdGAsS/view?usp=sharing",
@@ -45,7 +45,7 @@ export default function HomePage() {
         {
             id: 4,
             title: 'Site de musique',
-            desc: "Générateur d'accords de musique téléchargable avec preset, filtrage et édition d'un clavier",
+            desc: "Générateur d'accords de musique téléchargeable avec preset, filtrage et édition d'un clavier",
             tech: ['React', 'Next', 'TypeScript'],
             photo: "/img/Fds.png",
             link: "https://ojoloco.tiany-rafa.fr/",
