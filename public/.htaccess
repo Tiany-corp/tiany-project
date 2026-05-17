@@ -1,0 +1,14 @@
+# ----------------------------------------------------------------------
+# Next.js Static Export Rewrite Configuration for Apache / Infomaniak
+# ----------------------------------------------------------------------
+
+RewriteEngine On
+
+# 1. If a path is requested without .html, but the .html file exists, serve it internally
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# 2. Redirect Apache's default 404 error handler to Next.js's native 404 page
+ErrorDocument 404 /404.html
