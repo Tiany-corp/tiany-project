@@ -17,10 +17,10 @@ export default function APropos() {
                 </h1>
                 <div className="text-textSecondary text-lg leading-relaxed max-w-3xl mx-auto flex flex-col gap-4 text-center">
                     <p>
-                        À l’heure où l’IA s’apprête à faire disparaître des milliers d’emplois, je prends l’initiative de l’utiliser pour concevoir des projets qui nous rendent plus intentionnels, plus concentré et plus alignés avec nos valeurs. C’est cette vision que j’applique concrètement, notamment à travers le développement de mon application de gestion de pensées et d’autres outils conçus pour booster notre progression.
+                        À l’heure où l’IA s’apprête à faire disparaître des milliers d’emplois, je prends l’initiative de l’utiliser pour concevoir des projets qui nous rendent plus intentionnels, alignés et performants dans notre quotidien. C’est cette vision que j’applique concrètement, notamment à travers le développement de mon application de gestion de pensées et d’autres outils conçus pour booster notre progression.
                     </p>
                     <p>
-                        Piloter ce genre d’écosystèmes est précisément ce qui m’anime dans le métier de Chef de Projet IA. Pour incarner cette ambition et accélérer des innovations à impact, je recherche activement une alternance pour septembre 2026.
+                        Piloter ce genre d’écosystèmes dans un cadre bienveillant et stimulant est précisément ce qui m’anime dans le métier de Chef de Projet IA. Pour incarner cette ambition et accélérer des innovations à impact, je recherche activement une alternance pour septembre 2026.
                     </p>
                 </div>
             </motion.section>
